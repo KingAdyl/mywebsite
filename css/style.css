@@ -115,26 +115,15 @@ footer {
 	color: var(--secondary-color);
 }
 
-.grid-items1 {
-	padding: 1rem;
-	justify-self: center;
-	text-align: center;	
-}
-
-.grid-items2 {
-	padding: 1rem;
-	justify-self: center;
-	text-align: center;	
-}
-
 li {
 	padding: 10px;
-	font-family: monospace;
+	font-family: roboto;
 }
 
 .btn btn-outline-primary btn-sm {
 	position: absolute;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	size: 16px;	
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
 }
@@ -144,6 +133,8 @@ li {
   max-width: 1000px;
   position: relative;
   margin: auto;
+  border: #e4e4e4;
+  border-radius: 20px;
 }
 
 /* Next & previous buttons */
@@ -177,7 +168,7 @@ li {
 #icon {
 	width: 30%;
 	cursor: pointer;
-	/* background-color: var(--secondary-color); */
+	background-color: var(--secondary-color);
 	border-radius: 50%;
 }
 
@@ -201,7 +192,7 @@ li {
 	color: var(--secondary-color);
 }
 
-.flex-container > .div {
+.flex-container > .card {
 	display: flex;
 	flex-wrap: wrap;
 	border-color: gainsboro;
@@ -220,4 +211,7 @@ lottie-player {
     margin: 0 auto;
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
+	width: 300;
+	height: 300px;
+	object-fit: cover;
 }

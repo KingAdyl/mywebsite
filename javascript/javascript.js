@@ -1,6 +1,8 @@
 
 var icon = document.getElementById("icon");
 
+
+
 icon.onclick = function() {
     document.body.classList.toggle("dark-theme"); 
     if(document.body.classList.contains("dark-theme")){
@@ -49,4 +51,19 @@ function openModal() {
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+
+
+  function sendEmail() {
+    Email.send({
+          Host : "smtp.gmail.com",
+          Username : "adyl.dexter@gmail.com",
+          Password : "Zooxx4ever",
+          To : 'adylahm@gmail.com',
+          From : document.getElementById("email").value,
+          Subject : "New Contact Form Enquiry",
+          Body : "And this is the body"
+     }).then(
+      message => alert(message)
+  );
   }
