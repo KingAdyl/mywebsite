@@ -1,6 +1,8 @@
 
 .navigation-bar {
-    width: 100%;
+	display: flex;
+	flex-direction: row;
+    width: auto;
     margin-top: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 	color: var(--primary-color);
@@ -39,7 +41,6 @@
 
 .contact-me {
 	display: flex;
-	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: 2rem;
@@ -166,9 +167,8 @@ li {
 } */
 
 #icon {
-	width: 30%;
+	height: 20px;
 	cursor: pointer;
-	background-color: var(--secondary-color);
 	border-radius: 50%;
 }
 
@@ -179,6 +179,7 @@ li {
 .dark-theme {
 	--primary-color: #27272a;
 	--secondary-color: #fff;
+	
 }
 
 .flex-container {
@@ -192,14 +193,18 @@ li {
 	color: var(--secondary-color);
 }
 
-.flex-container > .card {
+.card {
 	display: flex;
-	flex-wrap: wrap;
-	border-color: gainsboro;
+	flex-direction: row;
 	opacity: 0.8;
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
 
+}
+
+.card > .card-body {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
 }
 
 .card:hover {
@@ -211,7 +216,10 @@ lottie-player {
     margin: 0 auto;
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
-	width: 300;
 	height: 300px;
 	object-fit: cover;
+}
+
+.rounded-pill {
+	align-self: center;
 }

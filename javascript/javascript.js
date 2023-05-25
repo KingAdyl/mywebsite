@@ -1,8 +1,6 @@
 
 var icon = document.getElementById("icon");
 
-
-
 icon.onclick = function() {
     document.body.classList.toggle("dark-theme"); 
     if(document.body.classList.contains("dark-theme")){
@@ -58,11 +56,11 @@ function openModal() {
     Email.send({
           Host : "smtp.gmail.com",
           Username : "adyl.dexter@gmail.com",
-          Password : "Zooxx4ever",
+          Password : "password",
           To : 'adylahm@gmail.com',
           From : document.getElementById("email").value,
           Subject : "New Contact Form Enquiry",
-          Body : "And this is the body"
+          Body : document.getElementById("formControlTextarea").value
      }).then(
       message => alert(message)
   );
