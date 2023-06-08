@@ -62,9 +62,9 @@
     <br>
     <form action="">
       <label for="origin">Origin:</label>
-      <input type="origin">
+      <input type="text" id="origin">
       <label for="destination">Destination:</label>
-      <input type="destination">
+      <input type="text" id="destination">
       <button class="button" onclick="getDirections()">Get Directions</button>
     </form>
 
@@ -80,11 +80,11 @@
       <a type="button" class="btn btn-link" href="/index.html#projects">Projects</a>
       <a type="button" class="btn btn-link" href="/index.html#contact-me">Contact Me</a>
         </ul><br><br>
-          <img src="https://iconarchive.com/download/i80497/uiconstock/socialmedia/Twitter.ico" alt="" width="30px"> 
+          <img src="/images/twitter-icon.png" alt="" width="30px"> 
           <a type="button" class="btn btn-link" href="https://www.twitter.com">Twitter</a>
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="" width="30px"> 
+          <img src="/images/linkedin-icon.png" alt="" width="30px"> 
           <a type="button" class="btn btn-link" href="https://www.linkedin.com/in/adyl">Linkedin</a>
-          <img src="https://cdn-icons-png.flaticon.com/512/646/646094.png" alt="" width="30px">
+          <img src="/images/mail-icon.png" alt="" width="30px">
           <a type="button" class="btn btn-link" href="mailto:adylahm@gmail.com">Email</a>
     </footer>
     
@@ -92,36 +92,44 @@
       <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
       <script src="/javascript/javascript.js"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1-Cxgo_bQnhJL5vg-4A9s7XymP1gOLlw&callback=initMap&v=weekly" async defer></script>
-      
-
       <script>
-        var map;
-        var marker;
-        var directionService;
-        var directionRender;
+var map;
+    var marker;
+    var directionsService;
+    var directionsRenderer;
 
-        function initMap() {
-
-          map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
-          center: {lat: 45.464203 , lng: 9.189982}
-        })
-      }
-        
-        directionsService = new google.maps.DirectionsService();
-        directionsRenderer = new google.maps.DirectionsRenderer({
-        map: map
-        });
-
-        map.addListener('click', function(event) {
-        showInfoWindow(event.latlng);
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lng: 9.1900, lat: 45.4642},
+        zoom: 13
       });
 
-      function placeMarker() {
+      directionsService = new google.maps.DirectionsService();
+      directionsRenderer = new google.maps.DirectionsRenderer({
+        map: map
+      });
+
+      map.addListener('click', function(event) {
+        showInfoWindow(event.latLng);
+      });
+    }
+
+    function placeMarker() {
       var lat = document.getElementById('marker-lat').value;
       var lng = document.getElementById('marker-lng').value;
       var location = new google.maps.LatLng(lat, lng);
       addMarker(location);
+    }
+
+    function addMarker(location) {
+      if (marker) {
+        marker.setMap(null);
+      }
+      marker = new google.maps.Marker({
+        position: location,
+        map: map
+      });
+      map.setCenter(location);
     }
 
     function getDirections() {

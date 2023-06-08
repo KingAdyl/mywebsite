@@ -14,7 +14,7 @@
 
     <nav class="navigation-bar">
       <div>
-        <img class="logo" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/512/external-transparency-social-media-agency-flaticons-lineal-color-flat-icons-4.png">
+        <img class="logo" src="/images/website-logo.png">
         <a href="#about-me" class="btn btn-outline-primary btn-sm" type="button">About Me</a>
         <a href="#projects" class="btn btn-outline-primary btn-sm" type="button">Projects</a>
         <a href="#contact-me" class="btn btn-outline-primary btn-sm" type="button">Contact Me</a>
@@ -31,12 +31,12 @@
     <div><img class="profileimg" src="images/adyl.png" alt="profile picture" width="200px"></div>
     <br>
       <div class="social-buttons">
-        <div class="shadow text-center border rounded-pill" style="width: 140px; height: 60px;">
-          <div><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn logo" width="25px"><a href="https://www.linkedin.com/in/adyl" target="_blank" class="text-decoration= none;">LinkedIn</a></div>
+        <div class="btn btn-light" style="width: 120px; margin-right: 3px;">
+          <div><img src="/images/linkedin-icon.png" alt="LinkedIn logo" width="25px"><a href="https://www.linkedin.com/in/adyl" target="_blank">LinkedIn</a></div>
         </div>
           <br>
-        <div class="shadow text-center border rounded-pill" style="width: 140px; height: 60px;">
-          <div><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github logo" width="25px"><a href="https://www.github.com/kingadyl" target="_blank">GitHub</a></div>
+        <div class="btn btn-light" style="width: 120px;">
+          <div><img src="/images/github-icon.png" alt="github logo" width="25px"><a href="https://www.github.com/kingadyl" target="_blank">GitHub</a></div>
         </div>
       </div>
     
@@ -44,7 +44,7 @@
 
     <div class="flex-container">
       <div class="card shadow" style="width: 350px; height: 500px;">
-        <div><lottie-player src="https://assets4.lottiefiles.com/packages/lf20_0vpM54jLCY.json"  background="transparent"  speed="1"  style="width: 200pxpx; height: 200px;"  loop autoplay></lottie-player></div>
+        <div><lottie-player src="/images/json/skills-animation.json"  background="transparent"  speed="1"  style="width: 200pxpx; height: 200px;"  loop autoplay></lottie-player></div>
         <div class="card-body">
           <h4>Skills</h4>
           <ul class="card-text">
@@ -57,7 +57,7 @@
       </div>
     
       <div class="card shadow" style="width: 350px; height: 500px;">
-        <div><lottie-player src="https://assets5.lottiefiles.com/packages/lf20_xafe7wbh.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop autoplay></lottie-player></div>
+        <div><lottie-player src="images/json/prog-lang-animation.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop autoplay></lottie-player></div>
           <div class="card-body">
             <h4>Programming Languages</h4>
             <p class="card-text">
@@ -80,7 +80,7 @@
       </div>  
 
       <div class="card shadow" style="width: 350px; height: 500px;">
-            <div><lottie-player src="https://assets7.lottiefiles.com/packages/lf20_rDmOieqhp3.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop autoplay></lottie-player></div>
+            <div><lottie-player src="/images/json/tools-animation.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop autoplay></lottie-player></div>
             <div class="card-body">
               <h4>Tools</h4>
               <ul class="card-text">
@@ -104,7 +104,7 @@
     <div><p>I am an aspiring Web and Software Developer with the trainig bootcamp in progress with Correlation One, one of the leading companies in the field. I enjoy solving probems and bring innovative solutions to the company I will join and fully dedicate to the mission.
         HTML, CSS and Javascipt have been the main focus for my development in the program and additionally I am tapping my feet into Node.js and Vercel, to have variety of skill-sets in my arsenal.</p></div>
     
-  <div  class="web-dev-lottie"><lottie-player src="https://assets2.lottiefiles.com/private_files/lf30_wqypnpu5.json"  background="transparent"  speed="1"  style="width: auto; height: 400px;"  loop autoplay></lottie-player></div>
+  <div  class="web-dev-lottie"><lottie-player src="/images/json/coding-animation.json"  background="transparent"  speed="1"  style="width: auto; height: 400px;"  loop autoplay></lottie-player></div>
   </div>
     
         <div><h2>Hobbies</h2></div>
@@ -198,32 +198,35 @@
  <hr class="rounded">
 
 <div class="contact-me mt-3">
-  <form onsubmit="sendEmail(); reset(); return false;">
+  <form name="myForm" onsubmit="sendEmail(); reset(); return validateForm()" method="post" required>
     <h2 id="contact-me">GET IN TOUCH</h2>
     <h4>Fill the form below</h4>
     <div class="d-flex flex-column mb-3">
       <label for="InputFirst" class="form-label">First Name</label>
-      <input type="name" class="form-control" id="InputName" aria-describedby="emailHelp">
+      <input type="name" name="fname" class="form-control required" id="InputName" aria-describedby="emailHelp">
     </div>
       <div class="d-flex flex-column mb-3">
         <label for="inputLast" class="form-label">Last Name</label>
-        <input type="name" class="form-control" id="inputLast">
+        <input type="name" class="form-control required" id="inputLast">
       </div>
     <form>
       <div class="d-flex flex-column mb-3">
         <label for="InputEmail" class="form-label">Email Address</label>
-        <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+        <input type="email" class="form-control required" id="InputEmail" aria-describedby="emailHelp" maxlength="20" minlength="5">
       </div>
     <form>
       <div class="d-flex flex-column mb-3">
-        <label for="InputNumber" class="form-label">Phone Number</label>
-        <input type="tel" class="form-control" id="InputTel" aria-describedby="emailHelp">
+        <label for="InputNumber" class="form-label required">Phone Number</label>
+        <input type="tel" class="form-control required" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" id="myform_phone" aria-describedby="emailHelp" maxlength="12">
+        <div id="phone_error" class="error hidden" Please enter a valid phone number></div>
       </div>
       <div class="mb-3">
-        <label for="formControlTextarea" class="form-label">Message</label>
-        <textarea class="form-control" id="formControlTextarea" rows="3"></textarea>
+        <label for="formControlTextarea" class="form-label ">Message</label>
+        <textarea class="form-control required" id="formControlTextarea" rows="3"></textarea>
       </div>
     <div><button type="submit" class="btn btn-primary">Submit</button></div>
+      <p id="errorMessage" style="color: red;"></p>
+      <p id="successMessage" style="color: green;"></p>
   </form>
 
 </div>
@@ -239,11 +242,11 @@
   <a type="button" class="btn btn-link" href="#projects">Projects</a>
   <a type="button" class="btn btn-link" href="#contact-me">Contact Me</a>
     </ul><br><br>
-      <img src="https://iconarchive.com/download/i80497/uiconstock/socialmedia/Twitter.ico" alt="" width="30px"> 
+      <img src="/images/twitter-icon.png" alt="" width="30px"> 
       <a type="button" class="btn btn-link" href="https://www.twitter.com">Twitter</a>
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="" width="30px"> 
+      <img src="/images/linkedin-icon.png" alt="" width="30px"> 
       <a type="button" class="btn btn-link" href="https://www.linkedin.com/in/adyl">Linkedin</a>
-      <img src="https://cdn-icons-png.flaticon.com/512/646/646094.png" alt="" width="30px">
+      <img src="/images/mail-icon.png" alt="" width="30px">
       <a type="button" class="btn btn-link" href="mailto:adylahm@gmail.com">Email</a>
 </footer>
 
@@ -256,6 +259,7 @@
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="/javascript/javascript.js"></script>
   <script src="/projects/algo.js"></script>
+  
 
 </body>
 </html>

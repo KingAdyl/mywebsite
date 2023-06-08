@@ -12,6 +12,12 @@
 
 .profileimg {
 	border-radius: 50%;
+	opacity: 1;
+	border: #212121;
+}
+
+.profileimg:hover {
+	opacity: 4;
 }
 
 
@@ -222,4 +228,20 @@ lottie-player {
 
 .rounded-pill {
 	align-self: center;
+}
+
+.btn btn-light {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	margin: 1rem;
+}
+
+.error
+{
+  color: red;
+  size: 80%
+}
+.hidden
+{
+  display:none
 }
