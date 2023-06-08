@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-</head>
-<a href="../index.html" id="logo"> 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<body class="body">
-<header id="home">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Google Maps API</title>
   <link rel="stylesheet" href="/css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap.css" rel="stylesheet">
 </head>
+<body>
     <nav class="navigation-bar">
       <div>
         <img class="logo" src="/images/website-logo.png" width="10px">
@@ -20,8 +16,7 @@
         <img src="/images/lightmode.png" id="icon"/>
       </div>
     </nav>
-  </header>
-  <body>
+
   <style>
     #map {
       height: 550px;
@@ -72,7 +67,7 @@
   
 
     <hr class="rounded">
-
+  </body>
     <footer>
       <img src="">
       <a type="button" class="btn btn-link" href="/index.html">Home</a>
@@ -88,12 +83,10 @@
           <a type="button" class="btn btn-link" href="mailto:adylahm@gmail.com">Email</a>
     </footer>
     
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
       <script src="/javascript/javascript.js"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1-Cxgo_bQnhJL5vg-4A9s7XymP1gOLlw&callback=initMap&v=weekly" async defer></script>
       <script>
-var map;
+  var map;
     var marker;
     var directionsService;
     var directionsRenderer;
@@ -155,5 +148,5 @@ var map;
     }
       </script>
   
-  </body>
+  
 </html>
